@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+            .main{
+                height:300px;
+                width: 300px;
+                display: flex;
+                border: solid black;
+            }
+            .inimg{
+                margin-bottom: 15px;
+                height:100px;
+                width:300px;
+                /* border:solid red; */
+            }
+            .button{
+                height:25px;
+            }
+            .button:hover{
+                color:blue;
+                background-color:red;
+                background: solid black;
+                border-radius: 30%;
+                border-style: outset;
+                border-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="inmain">
+                <img class="inimg" src="./image.png" alt="error"><br>
+                <button class="button" onclick="EO()">Even or Odd</button>
+                <button class="button" onclick="fact()">Factorial</button>
+                <button class="button" onclick="add()">Addition</button><br><br>
+                <button class="button" onclick="sub()">Subtraction</button>
+                <button class="button" onclick="mul()">Multiplication</button>
+                <button class="button" onclick="mod()">Modulus</button><br><br>
+                <button class="button" onclick="div()">Division</button>
+            </div>
+        </div>
+        <script>
+            function EO(){
+            let num = Number(prompt("Enter a number"))
+            if(num %2===0)
+            {
+                console.log(num + " is even")
+            }
+            else{
+                console.log(num + " is odd")
+            }
+        }
+        function fact(){
+            let num = Number(prompt("Enter a number"))
+            let fact=1
+            for(let i=1; i<=num; i++){
+                fact= fact*i
+            }
+            console.log("factorial of "+num+" is "+fact)
+        }
+        function add(){
+            let num1= Number(prompt("Enter the first number"))
+            let num2= Number(prompt("Enter the second number"))
+            let result= num1+num2
+            console.log("Addition of "+ num1 +" and "+ num2 + " is "+result)
+        }
+        function sub(){
+            let num1= Number(prompt("Enter the first number"))
+            let num2= Number(prompt("Enter the second number"))
+            let result= num1-num2
+            console.log("Subtraction of "+ num1 +" and " +num2 + " is "+result)
+        }
+        function mul(){
+            let num1= Number(prompt("Enter the first number"))
+            let num2= Number(prompt("Enter the second number"))
+            let result= num1*num2
+            console.log("Product of "+ num1 +" and " +num2 + " is "+result)
+        }
+        function mod(){
+            let num1= Number(prompt("Enter the first number"))
+            let num2= Number(prompt("Enter the second number"))
+            let result= num1%num2
+            console.log("Remainder of "+ num1 +" and "+ num2 + " is "+result)
+        }
+        function div(){
+            let num1= Number(prompt("Enter the dividend"))
+            let num2= Number(prompt("Enter the divisor"))
+            let result= num1/num2
+            console.log("Quotient of "+ num1 +" and "+ num2 + " is "+result)
+        }
+        </script>
+    </body>
+</html>
