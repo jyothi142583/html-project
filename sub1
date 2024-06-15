@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Famous Places</title>
+</head>
+<body>
+    <h1>Enter City Name to Visit Famous Place</h1>
+    <form id="cityForm">
+        <label for="cityName">City Name:</label>
+        <input type="text" id="cityName" name="cityName" required>
+        <button type="submit">Go</button>
+    </form>
+
+    <script>
+        document.getElementById('cityForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            var city = document.getElementById('cityName').value.trim().toLowerCase();
+            
+            var famousPlaceUrls = {
+                'paris': {
+                    url: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+                    map: 'https://www.google.com/maps/place/Eiffel+Tower'
+                },
+                'new york': {
+                    url: 'https://en.wikipedia.org/wiki/Statue_of_Liberty',
+                    map: 'https://www.google.com/maps/place/Statue+of+Liberty'
+                },
+                'london': {
+                    url: 'https://en.wikipedia.org/wiki/Big_Ben',
+                    map: 'https://www.google.com/maps/place/Big+Ben'
+                },
+                'rome': {
+                    url: 'https://en.wikipedia.org/wiki/Colosseum',
+                    map: 'https://www.google.com/maps/place/Colosseum'
+                },
+                'tokyo': {
+                    url: 'https://en.wikipedia.org/wiki/Tokyo_Tower',
+                    map: 'https://www.google.com/maps/place/Tokyo+Tower'
+                },
+                'mandya': {
+                    url: 'https://en.wikipedia.org/wiki/Mandya',
+                    map: 'https://www.google.com/maps/place/Mandya'
+                },
+                'bangalore': {
+                    url: 'https://en.wikipedia.org/wiki/Bangalore_Palace',
+                    map: 'https://www.google.com/maps/place/Bangalore+Palace'
+                },
+                'mangalore': {
+                    url: 'https://en.wikipedia.org/wiki/St._Aloysius_Chapel,_Mangalore',
+                    map: 'https://www.google.com/maps/place/St.+Aloysius+Chapel'
+                },
+                'mysore': {
+                    url: 'https://en.wikipedia.org/wiki/Mysore_Palace',
+                    map: 'https://www.google.com/maps/place/Mysore+Palace'
+                },
+                'bidhar': {
+                    url: 'https://en.wikipedia.org/wiki/Bidar_Fort',
+                    map: 'https://www.google.com/maps/place/Bidar+Fort'
+                },
+                'gujarat': {
+                    url: 'https://en.wikipedia.org/wiki/Statue_of_Unity',
+                    map: 'https://www.google.com/maps/place/Statue+of+Unity'
+                },
+                'kerala': {
+                    url: 'https://en.wikipedia.org/wiki/Backwaters_of_Kerala',
+                    map: 'https://www.google.com/maps/place/Backwaters+of+Kerala'
+                },
+                'delhi': {
+                    url: 'https://en.wikipedia.org/wiki/India_Gate',
+                    map: 'https://www.google.com/maps/place/India+Gate'
+                },
+                'hassan': {
+                    url: 'https://en.wikipedia.org/wiki/Hoysaleswara_Temple',
+                    map: 'https://www.google.com/maps/place/Hoysaleswara+Temple'
+                },
+                'mumbai': {
+                    url: 'https://en.wikipedia.org/wiki/Gateway_of_India',
+                    map: 'https://www.google.com/maps/place/Gateway+of+India'
+                },
+                'chennai': {
+                    url: 'https://en.wikipedia.org/wiki/Marina_Beach',
+                    map: 'https://www.google.com/maps/place/Marina+Beach'
+                },
+                'hyderabad': {
+                    url: 'https://en.wikipedia.org/wiki/Charminar',
+                    map: 'https://www.google.com/maps/place/Charminar'
+                },
+                'ahmedabad': {
+                    url: 'https://en.wikipedia.org/wiki/Sabarmati_Ashram',
+                    map: 'https://www.google.com/maps/place/Sabarmati+Ashram'
+                },
+                'surat': {
+                    url: 'https://en.wikipedia.org/wiki/Dumas_Beach',
+                    map: 'https://www.google.com/maps/place/Dumas+Beach'
+                },
+                'jaipur': {
+                    url: 'https://en.wikipedia.org/wiki/Hawa_Mahal',
+                    map: 'https://www.google.com/maps/place/Hawa+Mahal'
+                },
+                'pune': {
+                    url: 'https://en.wikipedia.org/wiki/Shaniwar_Wada',
+                    map: 'https://www.google.com/maps/place/Shaniwar+Wada'
+                },
+                'kolkata': {
+                    url: 'https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata',
+                    map: 'https://www.google.com/maps/place/Victoria+Memorial'
+                }
+                // Add more cities and URLs as needed
+            };
+            if (famousPlaceUrls[city]) {
+                window.open(famousPlaceUrls[city].url, '_blank');
+                window.open(famousPlaceUrls[city].map, '_blank');
+            } else {
+                alert('Famous place for this city is not available.');
+            }
+        });
+    </script>
+</body>
+</html>
